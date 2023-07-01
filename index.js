@@ -8,7 +8,7 @@ function addGrid(numTimes) {
     let currentGrid = divGrid + gridNum;
     do {
         currentGrid = document.createElement("div");
-        currentGrid.classList.add(divGrid + gridNum);
+        currentGrid.classList.add(divGrid);
         currentGrid.setAttribute("id",divGrid + gridNum);
         container.appendChild(currentGrid);
         i++
@@ -17,10 +17,15 @@ function addGrid(numTimes) {
     while (i < numTimes);
 }
 
-function colorGrid() {
-    document.getElementById("divGrid").style.backgroundColor = "red";
+function addColor() {
+    this.classList.add("coloredDiv");
+}
+
+function resetGrid() {
+    divs.forEach(divGrid => divGrid.classList.remove("coloredDiv"));
 }
 
 addGrid(16*16);
-// const divs = Array.from(document.querySelectorAll(".divGrid"));
-// window.addEventListener("mouseover", colorGrid);
+const divs = Array.from(document.querySelectorAll(".divGrid"));
+divs.forEach(divGrid => divGrid.addEventListener("mouseover", addColor));
+document.getElementById("reset").addEventListener("click", resetGrid);
