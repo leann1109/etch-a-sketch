@@ -1,0 +1,32 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+title {
+    display: none;
+}
+
+.container,
+.divGrid {
+    display: flex;
+}
+
+.container {
+    flex-flow: row wrap;
+    flex: 1;
+    justify-content: center;
+    width: 75vw;
+    height: 75vh;
+    margin: auto;
+}
+
+.divGrid {
+    margin: 0;
+    border: solid 1px black;
+    width: 6%;
+    height: 6%;
+}
