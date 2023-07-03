@@ -1,8 +1,9 @@
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
 }
@@ -11,9 +12,8 @@ title {
     display: none;
 }
 
+.container,
 .buttons-container {
-    /* margin-top: 5vh; */
-    /* margin-bottom: 0; */
     justify-content: center;
 }
 
@@ -31,21 +31,18 @@ title {
 
 .container {
     flex-direction: column;
-    justify-content: center;
     width: 75vw;
     height: 75vh;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .divRow {
     flex-direction: row;
     width: 100%;
     height: 100%;
-    flex: 1;
 }
 
 .divRow > * {
-    flex-direction: row;
     border: solid 1px black;
     width: 100%;
     height: 100%;
