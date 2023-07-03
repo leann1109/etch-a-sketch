@@ -1,8 +1,8 @@
 const userInput = Number(window.prompt("Please enter a number from 1 to 100"));
 const container = document.querySelector(".container");
 
-if (userInput > 100) {
-    userInput = Number(window.prompt("Please enter a number below 100"));
+if (userInput > 100 || userInput < 1) {
+    userInput = Number(window.prompt("Please enter a number between 1 and 100"));
 }
 
 function addGrid(numTimes) {
@@ -40,8 +40,8 @@ function newGrid() {
     let divRemove = Array.from(document.querySelectorAll(".divRow"));
     divRemove.forEach(divRemove => divRemove.classList.remove("divRow"));
     let userInput = Number(window.prompt("Please enter a number from 1 to 100"));
-    if (userInput > 100) {
-        userInput = Number(window.prompt("Please enter a number below 100"));
+    if (userInput > 100 || userInput < 1) {
+        userInput = Number(window.prompt("Please enter a number between 1 and 100"));
     }
     addGrid(userInput);
     let divs = Array.from(document.querySelectorAll(".divGrid"));
